@@ -1,6 +1,4 @@
-Scriptname newBeginningsCore extends ReferenceAlias
-
-import newBeginningsQuest
+Scriptname newBeginningsCore extends Quest
 
 ;Properties
 Actor Property playerRef Auto mandatory
@@ -21,6 +19,10 @@ auto State WaitingForDeath
 		If !isModEnabled()
 			newB_Message_NotLoaded.Show()
 			EndIf
+	EndEvent
+
+	Event OnBeginState()
+		GetPlayer.
 	EndEvent
 
 	;Player enters low health
